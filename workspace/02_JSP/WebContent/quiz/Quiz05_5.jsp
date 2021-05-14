@@ -9,10 +9,10 @@
 
 	File file = new File(realPath);
 	if (file.exists()) {
-		file.delete();
+			file.delete();
 	}
 	
-	boolean isExist = file.exists();
+	boolean isExist = file.exists();	// 삭제 여부 확인
 	
 %>
 <script>

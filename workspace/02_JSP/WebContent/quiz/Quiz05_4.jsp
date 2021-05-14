@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 	<script>
 		function fn(f) {
 			if (confirm('정말 탈퇴하시겠습니까?')) {
-				f.action = "/02_JSP/quiz/Quiz05_5.jsp"
+				f.action = "/02_JSP/quiz/Quiz05_5.jsp";
 				f.submit();
 			}
 		}

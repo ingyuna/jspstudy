@@ -18,8 +18,8 @@
 	
 	<form action="/02_JSP/quiz/Quiz05_3.jsp" method="post">
 		위 약관에 동의하십니까?<br><br>
-		<input type="radio" name="agreement" id="yes">동의 함
-		<input type="radio" name="agreement" id="no">동의 안 함<br><br>
+		<input type="radio" name="agreement" value="yes">동의 함
+		<input type="radio" name="agreement" value="no">동의 안 함<br><br>
 		<%
 			request.setCharacterEncoding("utf-8");
 		%>
