@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="EX04_parameter2.jsp"> <%-- 같은 경로에 있으니까 파일명만 적어도 된다. --%>
+	<form action="Ex04_parameter2.jsp"> <%-- 같은 경로에 있으니까 파일명만 적어도 된다. --%>
 		<input type="text" name="name" placeholder="이름"><br>
 		<input type="text" name="age" placeholder="나이"><br>
 		<input type="radio" name="gender" value="남">남자
