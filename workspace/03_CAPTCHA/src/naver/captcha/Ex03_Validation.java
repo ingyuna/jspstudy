@@ -69,7 +69,7 @@ public class Ex03_Validation {
 		    
 		    JSONObject obj2 = null;
 		    try {
-		    	obj2 = (JSONObject)parse.parse(responseBody);
+		    	obj2 = (JSONObject)parser.parse(responseBody);
 		    } catch (Exception e) {
 		    	e.printStackTrace();
 		    }
@@ -79,7 +79,7 @@ public class Ex03_Validation {
 		    	System.out.println("휴먼이군요~");
 		    } else {
 		    	System.out.println("누구냐 넌?");
-		
+		    }
 	    }
 
 	    private static String get1(String apiUrl, Map<String, String> requestHeaders){
@@ -184,8 +184,8 @@ public class Ex03_Validation {
 	        } catch (IOException e) {
 	            throw new RuntimeException("API 응답을 읽는데 실패했습니다.", e);
 	        }
-	    }         
+	     }         
 	        
-	    }   
+	  }   
 	
-}
+
