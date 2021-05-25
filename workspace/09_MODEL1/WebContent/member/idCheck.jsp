@@ -20,7 +20,7 @@
 	} else {
 		out.println("<script>");
 		out.println("alert('이미 사용중인 아이디입니다.')");
-		out.println("location.href = 'joinPage.jsp");
+		out.println("location.href = 'joinPage.jsp'");
 		out.println("</script>");
 		
 	}

@@ -51,6 +51,11 @@
 				}
 			})
 			
+			$('#cancel_btn').on('click', function(){
+				location.href = '../index.jsp';
+				// location.href = '/09_MODEL1/index.jsp';   이렇게 해도 된다.
+			})
+			
 		})
 		
 		

@@ -35,7 +35,6 @@ public class DBConnector {
 	// Connection 닫기
 	public void close(PreparedStatement ps, ResultSet rs) {
 		try {
-			if (con != null) { con.close(); }
 			if (ps != null) { ps.close(); }
 			if (rs != null) { rs.close(); }
 		} catch (Exception e) {
