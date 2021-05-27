@@ -49,6 +49,7 @@ public class Test {
 			String name = obj.get("name").toString();
 			long age = (long)obj.get("age");
 			System.out.println("이름: " + name + ", 나이: " + age);
+			
 			JSONArray staff = (JSONArray)obj.get("staff");
 			for (int i = 0; i <staff.size(); i++) {
 				JSONObject obj2 = (JSONObject)staff.get(i);

@@ -23,6 +23,7 @@ public class PageVO {
 	private int pagePerBlock = 5;	// 한 블록에 5개 페이지를 표시
 	private int beginPage = 0;		// 각 블록에 표시되는 시작 페이지 번호
 	private int endPage = 0;		// 각 블록에 표시되는 종료 페이지 번호 
+	
 	public int getTotalRecord() {
 		return totalRecord;
 	}
@@ -35,7 +36,7 @@ public class PageVO {
 	// 전체 페이지는 전체 레코드 개수와 한 페이지에 표시되는 게시글 개수로 계산한다. (받아오는게 아니고, 계산)
 	public void setTotalPage() {
 		totalPage = totalRecord / recordPerPage;
-		if (totalPage % recordPerPage != 0) {		// 나누어 떨어지지 않은 상태. Ex) 16개 or 17개등등의 전체페이지가 있을 때
+		if (totalRecord % recordPerPage != 0) {		// 나누어 떨어지지 않은 상태. Ex) 16개 or 17개등등의 전체페이지가 있을 때
 			totalPage++;
 		}
 	}
