@@ -43,7 +43,7 @@ public class Test {
        
        FileOutputStream fos = null;
        try {
-    	  fos = new FileOutputStream("text.txt");
+    	   fos = new FileOutputStream("text.txt");
     	   
     	   obj = (JSONObject)parser.parse(responseBody); 	// 객체 먼저
     	   String sDate = obj.get("startDate").toString();
