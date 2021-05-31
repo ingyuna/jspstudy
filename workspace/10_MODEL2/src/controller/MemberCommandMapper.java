@@ -1,20 +1,25 @@
 package controller;
 
+import command.member.DeleteMemberCommand;
 import command.member.LoginCommand;
 import command.member.LoginPageCommand;
 import command.member.LogoutCommand;
 import command.member.MemberCommand;
+import command.member.MyPageCommand;
+import command.member.UpdateMemberCommand;
+import command.member.UpdatePwCommand;
+import command.member.UpdatePwPageCommand;
 import command.member.joinCommand;
 import command.member.joinPageCommand;
 
-public class CommandMapper {
+public class MemberCommandMapper {
 
 	// singleton pattern
-	private static CommandMapper instance = new CommandMapper();
-	private CommandMapper() {}
-	public static CommandMapper getInstance() {
+	private static MemberCommandMapper instance = new MemberCommandMapper();
+	private MemberCommandMapper() {}
+	public static MemberCommandMapper getInstance() {
 		if (instance == null) {
-			instance = new CommandMapper();
+			instance = new MemberCommandMapper();
 		}
 		return instance;		
 	}
@@ -31,6 +36,12 @@ public class CommandMapper {
 		case "joinPage.m":
 			command = new joinPageCommand();
 			break;
+		case "myPage.m":
+			command = new MyPageCommand();
+			break;
+		case "updatePwPage.m":
+			command = new UpdatePwPageCommand();
+			break;
 		case "login.m":
 			command = new LoginCommand();
 			break;	
@@ -40,6 +51,15 @@ public class CommandMapper {
 		case "join.m":
 			command = new joinCommand();
 			break;	
+		case "updatePw.m":
+			command = new UpdatePwCommand();
+			break;
+		case "updateMember.m":
+			command = new UpdateMemberCommand();
+			break;
+		case "deleteMember.m":
+			command = new DeleteMemberCommand();
+			break;
 		}
 		return command;
 	}

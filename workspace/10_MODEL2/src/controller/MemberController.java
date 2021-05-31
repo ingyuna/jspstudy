@@ -32,7 +32,7 @@ public class MemberController extends HttpServlet {
 		String cmd = arr[arr.length -1];	// cmd == "loginPage.m"		// 그냥 2번이요 라고 하면 안된다.맵핑값(배열의 요소)이 길어질 수 있기 때문에
 		
 		// 요청을 전달하면 그 요청을 처리할 Model(Command)을 반환하는 CommandMapper 클래스를 통해 Command를 받음
-		MemberCommand command = CommandMapper.getInstance().getCommand(cmd);
+		MemberCommand command = MemberCommandMapper.getInstance().getCommand(cmd);
 		ModelAndView mav = null;
 		if (command != null) {
 			mav = command.execute(request, response);	// 실행 결과는 -> 무조건 ModelAndView다.			
