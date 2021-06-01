@@ -25,25 +25,27 @@
 			<a href="/10_MODEL2/index.do">
 				<img src="<%=request.getContextPath()%>/assets/images/daum.png" alt="로고" style="width: 200px;">
 			</a>
-			<nav>
-				<ul>
+			<p class="info">
 					<c:if test="${loginDTO == null}">
-						<li><a href="/10_MODEL2/joinPage.m">회원가입</a></li>
 						<li><a href="/10_MODEL2/loginPage.m">로그인</a></li>
-						<li><a href="/10_MODEL2/loginPage.m">마이페이지</a></li>
-						<li><a href="/10_MODEL2/selectListBoardPage.b">게시판</a></li>
+						<li><a href="/10_MODEL2/joinPage.m">회원가입</a></li>
 					</c:if>
-					<c:if test="${loginDTO != null}">
-						<li><a href="/10_MODEL2/logout.m">로그아웃</a></li>
-						<li><a href="/10_MODEL2/myPage.m">마이페이지</a></li>
-						<li><a href="/10_MODEL2/selectListBoardPage.b">게시판</a></li>
-					</c:if>
-				</ul>	
-				<p>
 					<c:if test="${loginDTO != null}">
 						${loginDTO.name}님 반갑습니다 ♥
+						<a href="/10_MODEL2/logout.m">로그아웃</a>
+						<a href="/10_MODEL2/myPage.m">마이페이지</a>
 					</c:if>
-				</p>		
+			</p>
+			<nav>			
+				<ul>
+						<li><a href="/10_MODEL2/selectListBoardPage.b">게시판</a></li>
+						<li><a href="#">메뉴2</a></li>
+						<li><a href="#">메뉴3</a></li>
+						<li><a href="#">메뉴4</a></li>
+						<li><a href="#">메뉴5</a></li>
+						
+					
+				</ul>		
 			</nav>
 		</header>
 		

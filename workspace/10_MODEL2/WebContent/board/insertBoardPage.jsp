@@ -10,10 +10,11 @@
 <style>
 
 	.insert_form {
+		width: 600px;
 		maring: 0 auto;
 	}
 	
-	#f input {
+	input[type=text] {
 		padding: 5px;
 		width: 100%;
 		height: 50px;
@@ -21,7 +22,7 @@
 	textarea {
 		padding: 5px;
 		width: 100%;
-		height: 250px;
+		height: 200px;
 	}
 	.btns {
 		margin: 0 auto;
@@ -29,7 +30,7 @@
 		text-align: center;
 	}
 	.btn {
-		width: 15px;
+		width: 150px;
 		height: 40px;
 		line-height: 40px;
 		background: orange;

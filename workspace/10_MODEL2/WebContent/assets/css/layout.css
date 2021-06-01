@@ -15,11 +15,18 @@
 			margin: 0 auto;
 		}
 		
+		.info {
+			width: 100%;
+			text-align: center;
+		}
+		
 		nav {
-			display: flex;
+			width: 100%;
+			overflow: hidden;
 		}
 		
 		nav > ul {
+			width: 100%;
 			list-style-type: none;
 			display: flex;
 			border-bottom: 1px solid gray;
