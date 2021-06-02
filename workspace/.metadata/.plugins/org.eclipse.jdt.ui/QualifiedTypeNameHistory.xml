@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.Parser"/>
-<fullyQualifiedTypeName name="oracle.sql.DATE"/>
-<fullyQualifiedTypeName name="dto.MemberLogDTO"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="javax.naming.NamingException"/>
-<fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
@@ -45,19 +38,26 @@
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="command.board.SelectListBoardCommand"/>
 <fullyQualifiedTypeName name="command.board.InsertBoardPageCommand"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
-<fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="common.ModelAndView"/>
 <fullyQualifiedTypeName name="command.board.InsertBoardCommand"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="org.apache.commons.collections4.map.HashedMap"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="command.board.selectOneBoardCommand"/>
+<fullyQualifiedTypeName name="command.board.FindBoardCommand"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="common.Paging"/>
+<fullyQualifiedTypeName name="command.board.DeleteBoardCommand"/>
+<fullyQualifiedTypeName name="command.board.UpdateBoardPageCommand"/>
+<fullyQualifiedTypeName name="command.board.UpdateBoardCommand"/>
+<fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
+<fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="dto.BoardDTO"/>
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="common.ModelAndView"/>
 </qualifiedTypeNameHistroy>
