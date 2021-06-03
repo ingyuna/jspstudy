@@ -43,7 +43,7 @@ public class InsertReplyCommand3 implements BoardCommand {
 		int result = BoardDAO.getInstance().insertReply(replyDTO);
 		
 		// 이동
-		return new ModelAndView("/11_MYBATIS/board/insertReplyResult2.jsp?result=" + result, true);	// 삽입 후에는 반드시 리다이렉트한다.
+		return new ModelAndView("/11_MYBATIS/board/insertReplyResult3.jsp?result=" + result, true);	// 삽입 후에는 반드시 리다이렉트한다.
 		
 	}
 
