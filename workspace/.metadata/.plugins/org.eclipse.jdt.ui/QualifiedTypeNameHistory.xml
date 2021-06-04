@@ -50,14 +50,14 @@
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
 <fullyQualifiedTypeName name="mybatis.config.DBService"/>
 <fullyQualifiedTypeName name="command.BoardCommand"/>
-<fullyQualifiedTypeName name="common.ModelAndView"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="common.Paging"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="dto.BoardDTO"/>
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
-<fullyQualifiedTypeName name="common.Paging"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="common.ModelAndView"/>
 </qualifiedTypeNameHistroy>

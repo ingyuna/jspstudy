@@ -110,9 +110,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 WHERE B.RN BETWEEN #{beginRecord} AND #{endRecord}	
 	</select>
 	
+	<select id="selectBoard" parameterType="long" resultType="dto.BoardDTO">
+		SELECT *
+		  FROM BOARD
+		 WHERE NO = ${no}
+	</select>
 	
-	
-	
+	<update id="increaseGroupordOtherReply" parameterType="dto.BoardDTO">
+		UPDATE BOARD
+		   SET GROUPORD = GROUPORD + 1
+		 WHERE GROUPNO = ${groupno}
+		   AND GROUPORD > ${groupord}
+	</update>
 	
 	
 	
