@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="command.member.LoginPageCommand"/>
-<fullyQualifiedTypeName name="command.member.MemberCommand"/>
-<fullyQualifiedTypeName name="controller.CommandMapper"/>
-<fullyQualifiedTypeName name="command.member.joinPageCommand"/>
-<fullyQualifiedTypeName name="command.member.LoginCommand"/>
 <fullyQualifiedTypeName name="command.member.LogoutCommand"/>
 <fullyQualifiedTypeName name="command.member.joinCommand"/>
 <fullyQualifiedTypeName name="command.member.MyPageCommand"/>
@@ -12,9 +7,6 @@
 <fullyQualifiedTypeName name="command.member.UpdatePwCommand"/>
 <fullyQualifiedTypeName name="command.member.UpdateMemberCommand"/>
 <fullyQualifiedTypeName name="command.member.DeleteMemberCommand"/>
-<fullyQualifiedTypeName name="dao.MemberDAO"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="controller.BoardCommandMapper"/>
 <fullyQualifiedTypeName name="command.board.BoardCommand"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -36,19 +28,14 @@
 <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
 <fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="dto.MemberDTO"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="insertReply.InsertReplyCommand"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="dto.ReplyDTO"/>
 <fullyQualifiedTypeName name="command.board.DeleteReplyCommand"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
-<fullyQualifiedTypeName name="mybatis.config.DBService"/>
 <fullyQualifiedTypeName name="command.BoardCommand"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -56,8 +43,21 @@
 <fullyQualifiedTypeName name="common.Paging"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="dto.BoardDTO"/>
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="dto.BoardDTO"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="oracle.sql.TIMESTAMP"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="command.MemberCommand"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+<fullyQualifiedTypeName name="mybatis.config.DBService"/>
 <fullyQualifiedTypeName name="common.ModelAndView"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="dto.Member"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="dao.MemberDAO"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

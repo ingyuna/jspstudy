@@ -27,8 +27,8 @@
 			</a>
 			<p class="info">
 					<c:if test="${loginDTO == null}">
-						<li><a href="/10_MODEL2/loginPage.m">로그인</a></li>
-						<li><a href="/10_MODEL2/joinPage.m">회원가입</a></li>
+						<a href="/10_MODEL2/loginPage.m">로그인</a>
+						<a href="/10_MODEL2/joinPage.m">회원가입</a>
 					</c:if>
 					<c:if test="${loginDTO != null}">
 						${loginDTO.name}님 반갑습니다 ♥
