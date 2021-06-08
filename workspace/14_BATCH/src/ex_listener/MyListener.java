@@ -57,6 +57,8 @@ public class MyListener implements ServletContextListener {
     				.withIdentity("myTrigger", "group2")
     				.withSchedule(CronScheduleBuilder.cronSchedule("0 0/1 * 1/1 * ? *"))	 // cronSchedule()에 전달할 인수는 cron식(cronMaker에서 생성)
     				.build();
+    		
+    		
     				
   		// 스케쥴러 시작
     		scheduler.start(); 

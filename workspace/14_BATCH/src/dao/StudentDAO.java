@@ -36,10 +36,17 @@ public class StudentDAO {
 		int result = ss.insert("dao.student.insertStudent", dto);
 		if (result > 0) ss.commit();		// -> 중괄호{ } 없이 이렇게 한 줄로 처리해도 된다.
 		ss.close();
-		return result;
-			
-		
+		return result;	
 	}
+	
+	public List<StudentDTO> top3StudentList() {
+		SqlSession ss = factory.openSession();
+		List<StudentDTO> list = ss.selectList("dao.student.top3StudentList");
+		ss.close();
+		return list;
+	}
+	
+	
 	
 	
 	

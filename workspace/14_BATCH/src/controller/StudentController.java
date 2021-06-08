@@ -38,6 +38,7 @@ public class StudentController extends HttpServlet {
 		case "insertStudent.do":
 			command = new InsertStudentCommand();
 			break;
+			
 		}
 		
 		if (command != null) {		// 실행할 때 try~catch가 필요하다. 위에서 throws를 던지기 때문에.
