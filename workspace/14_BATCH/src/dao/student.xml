@@ -48,7 +48,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="top3StudentList" resultType="dto.StudentDTO">
 		SELECT ROWNUM, A.SNO, A.NAME, A.KOR, A.ENG, A.MAT, A.AVE, A.GRADE
-		  FROM (SELECT SNO, NAME, KOR, ENG, MAT, AVE, GRADE)
+		  FROM (SELECT SNO, NAME, KOR, ENG, MAT, AVE, GRADE
 		          FROM STUDENT
 		         ORDER BY AVE DESC) A
 		 WHERE <![CDATA[ROWNUM <= 3]]>

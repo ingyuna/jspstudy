@@ -17,7 +17,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         </environment>
 	</environments>
 	
-	<!-- 주석 다는 위치 -->
 	<mappers>
         <mapper resource="dao/student.xml"/>
 	</mappers>
