@@ -1,0 +1,53 @@
+package command;
+
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.BoardDAO;
+import dto.BoardDTO;
+import mav.ModelAndView;
+
+public class InsertBoardCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+		
+
+		
+		ModelAndView mav = null;
+		try {
+		
+			// DB로 보낼 DTO
+			BoardDTO dto = new BoardDTO();
+	
+			dto.setAuthor(request.getParameter("author"));
+			dto.setTitle(request.getParameter("title"));
+			dto.setContent(request.getParameter("content"));
+			
+			
+			
+			// DAO의 insertBoard() 메소드 호출
+			int result = BoardDAO.getInstance().insertBoard(dto);
+			if (result == 0) {		// 실패했을 때
+				PrintWriter out = response.getWriter();
+				out.println("<script>");
+				out.println("alert('게시글이 등록되지 않았습니다.')");
+				out.println("history.back()");
+				out.println("</script>");				
+			} else {	// 성공했을 때
+				mav = new ModelAndView("/10_MODEL2/selectListBoardPage.b", true);
+			}		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return mav;
+	}
+		
+		
+		
+	}
+
+}

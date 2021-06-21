@@ -1,0 +1,78 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import dto.BoardDTO;
+
+public class BoardDAO {
+
+	private Connection con;
+	private PreparedStatement ps;
+	private ResultSet rs;
+	private String sql;
+	
+	private static DataSource dataSource;
+	static {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/oracle");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static BoardDAO instance = new BoardDAO();
+	private BoardDAO() {}
+	public static BoardDAO getInstance() {
+		if (instance == null) {
+			instance = new BoardDAO();
+		}
+		return instance;
+	}
+	
+	// 접속 해제 
+	public void close(Connection con, PreparedStatement ps, ResultSet rs) {
+		try {
+			if (con != null) { con.close(); }
+			if (ps != null) { ps.close(); }
+			if (rs != null) { rs.close(); }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	// 게시글 목록 반환
+	public List<BoardDTO> selectList() {		
+		List<BoardDTO> list = new ArrayList<BoardDTO>();
+		try {
+			con = dataSource.getConnection();
+			sql = "SELECT NO, TITLE, AUTHOR, POSTDATE, HIT FROM BOARD";	
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				BoardDTO dto = new BoardDTO();
+				dto.setNo(rs.getLong(1));
+				dto.setTitle(rs.getString(2));
+				dto.setAuthor(rs.getString(3));
+				dto.setContent(rs.getString(4));
+				dto.setHit(rs.getInt(5));
+				dto.setState(rs.getInt(6));
+				dto.setPostdate(rs.getDate(7));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(con, ps, rs);
+		}
+		return list;
+	}
+	
+}

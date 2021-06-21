@@ -1,0 +1,43 @@
+package command;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.BoardDAO;
+import dto.BoardDTO;
+import dto.ReplyDTO;
+import mav.ModelAndView;
+
+public class SelectOneBoardCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+	
+		// 파라미터 처리
+				long no = Long.parseLong(request.getParameter("no"));
+				
+				BoardDTO dto = BoardDAO.getInstance().selectOneBoardByIdx(no);
+				
+				BoardDAO.getInstance().updateHit(no);
+				
+				List<ReplyDTO> replyList = BoardDAO.getInstance().selectListReply(no);
+				
+				// 게시글이 존재하던 목록의 주소
+				String referer = request.getHeader("referer");
+				
+				// 응답View로 전달할 데이터
+				request.setAttribute("dto", dto);
+				request.setAttribute("referer", referer);
+				request.setAttribute("replyList", replyList);
+				
+				// 어디로 어떻게
+				ModelAndView mav = new ModelAndView("/board/viewBoard.jsp", false);	
+				return mav;
+			}
+		
+		
+	}
+
+}

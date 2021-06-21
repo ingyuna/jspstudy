@@ -1,0 +1,15 @@
+package batch;
+
+import org.quartz.Job;
+import org.quartz.Scheduler;
+
+public class CronScheduller {
+
+	private String cronExpression;
+	private Class<? extends Job> job;
+	Scheduler scheduler; 	
+	
+	
+	
+	
+}

@@ -1,0 +1,82 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class BoardDAO {
+
+	private Connection con;
+	private PreparedStatement ps;
+	private ResultSet rs;
+	private String sql;
+	
+	private static DataSource dataSource;
+	static {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/oracle");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static BoardDAO instance = new BoardDAO();
+	private BoardDAO() {}
+	public static BoardDAO getInstance() {
+		if (instance == null) {
+			instance = new BoardDAO();
+		}
+		return instance;
+	}
+	
+	// 접속 해제 
+	public void close(Connection con, PreparedStatement ps, ResultSet rs) {
+		try {
+			if (con != null) { con.close(); }
+			if (ps != null) { ps.close(); }
+			if (rs != null) { rs.close(); }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	// 게시글 목록 반환
+	public java.util.List<E> selectList() {		
+		List<BoardDTO> list = new ArrayList<BoardDTO>();
+		try {
+			con = dataSource.getConnection();
+			sql = "SELECT IDX, AUTHOR, TITLE, CONTENT, HIT, STATE, POSTDATE FROM BOARD";
+					
+					
+					/* "SELECT B.IDX, B.AUTHOR, B.TITLE, B.CONTENT, B.HIT, B.STATE, B.POSTDATE" + 
+					  "  FROM (SELECT A.IDX, A.AUTHOR, A.TITLE, A.CONTENT, A.HIT, A.STATE, A.POSTDATE" + 
+					  "          FROM (SELECT IDX, AUTHOR, TITLE, CONTENT, HIT, STATE, POSTDATE" + 
+					  "                  FROM BOARD" + 
+					  "                 ORDER BY POSTDATE DESC) A ) B"; */
+
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				BoardDTO dto = new BoardDTO();
+				dto.setIdx(rs.getLong(1));
+				dto.setAuthor(rs.getString(2));
+				dto.setTitle(rs.getString(3));
+				dto.setContent(rs.getString(4));
+				dto.setHit(rs.getInt(5));
+				dto.setState(rs.getInt(6));
+				dto.setPostdate(rs.getDate(7));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(con, ps, rs);
+		}
+		return list;
+	}
+	
+}

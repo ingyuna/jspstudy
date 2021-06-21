@@ -1,0 +1,37 @@
+package batch;
+
+import org.quartz.Job;
+import org.quartz.Scheduler;
+
+public class CronScheduller {
+
+	private String cronExpression;
+	private Class<? extends Job> job;
+	Scheduler scheduler; 	
+	
+	public CronScheduler(String cronExpression, Class<? extends Job> job) {
+		super();
+		this.cronExpression = cronExpression;
+		this.job = job;
+	}
+	
+	public void execute() {
+		try {
+			JobDetail jobDetail = JobBuilder.newJob(job)
+					.withIdentity("job", "group1")
+					.build();
+			CronTrigger crontrigger = TriggerBuilder.newTrigger()
+					.withIdentity("trigger", "group1")
+					.withSchedule(CronScheduleBuilder.cronSchedule(cronExpression))
+					.build();
+			scheduler = StdSchedulerFactory.getDefaultScheduler();
+			scheduler.start();
+			scheduler.scheduleJob(jobDetail, crontrigger);
+		} catch (SchedulerException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+}

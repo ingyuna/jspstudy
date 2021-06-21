@@ -1,0 +1,49 @@
+package command;
+
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.BoardDAO;
+import dto.BoardDTO;
+import mav.ModelAndView;
+
+public class InsertBoardCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+		
+
+		
+		ModelAndView mav = null;
+		
+		try {
+			
+			String author = request.getParameter("author");
+			String title = request.getParameter("title");
+			String content = request.getParameter("content");			
+			
+			BoardDTO dto = new BoardDTO();		
+			dto.setAuthor(author);			
+			dto.setTitle(title);
+			dto.setContent(content);
+					
+			int result = BoardDAO.getInstance().insertBoard(dto);
+			if (result == 0) {		
+				PrintWriter out = response.getWriter();
+				out.println("<script>");
+				out.println("alert('게시글이 저장되지 않았습니다.')");
+				out.println("history.back()");
+				out.println("</script>");				
+			} else {	
+				mav = new ModelAndView("/ServerProgram3/selectBoardList.do", true);
+			}		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return mav;
+	}
+
+}

@@ -14,6 +14,7 @@ public class BoardDTO {
 	private int state;
 	private Date postdate;
 	private Date lastmodified;
+	
 	public long getIdx() {
 		return idx;
 	}

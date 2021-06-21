@@ -1,0 +1,5 @@
+package mav;
+
+public class ModelAndView {
+
+}

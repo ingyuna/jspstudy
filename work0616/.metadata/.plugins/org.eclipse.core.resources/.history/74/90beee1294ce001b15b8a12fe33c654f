@@ -1,0 +1,38 @@
+package command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mav.ModelAndView;
+
+public class DeleteReplyCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+		
+				long replyNo = Long.parseLong(request.getParameter("replyNo"));	
+				long idx = Long.parseLong(request.getParameter("idx"));		
+				
+				// DAO의 deleteReply() 메소드 호출
+				int result = BoardDAO.getInstance().deleteReply(replyIdx);
+				
+				ModelAndView mav = null;	// 실패했을 때 안만들어도 되니까 null로 잡아놓는다.		
+				try {
+					if (result == 0) {
+						PrintWriter out = response.getWriter();
+						out.println("<script>");
+						out.println("alert('댓글이 삭제되지 않았습니다.')");
+						out.println("history.back()");
+						out.println("</script>");
+					} else {
+						mav = new ModelAndView("/10_MODEL2/selectOneBoard.b?idx=" + idx, true);		// redirect
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				return mav;
+			}
+	}
+
+}

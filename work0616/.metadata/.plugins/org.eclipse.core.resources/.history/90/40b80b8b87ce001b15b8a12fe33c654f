@@ -1,0 +1,28 @@
+package command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.BoardDAO;
+import dto.BoardDTO;
+import mav.ModelAndView;
+
+public class ViewBoardCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+			
+				long no = Long.parseLong(request.getParameter("idx"));
+			
+				BoardDTO dto = BoardDAO.getInstance().viewBoard(idx);
+				
+				String referer = request.getHeader("referer"); 
+				
+				request.setAttribute("dto", dto);
+				
+				ModelAndView mav = new ModelAndView("/board/viewBoard.jsp", false);  // forward
+				return mav;
+				
+			}
+
+}

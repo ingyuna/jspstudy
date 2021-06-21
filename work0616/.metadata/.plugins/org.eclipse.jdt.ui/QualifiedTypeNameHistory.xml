@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="command.BoardCommand"/>
+<fullyQualifiedTypeName name="mav.ModelAndView"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="dto.BoardDTO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="dto.ReplyDTO"/>
+<fullyQualifiedTypeName name="dao.BoardDAO"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="org.quartz.Job"/>
+<fullyQualifiedTypeName name="org.quartz.Scheduler"/>
+<fullyQualifiedTypeName name="org.quartz.JobDetail"/>
+<fullyQualifiedTypeName name="org.quartz.JobBuilder"/>
+<fullyQualifiedTypeName name="org.quartz.CronTrigger"/>
+<fullyQualifiedTypeName name="org.quartz.TriggerBuilder"/>
+<fullyQualifiedTypeName name="org.quartz.CronScheduleBuilder"/>
+<fullyQualifiedTypeName name="org.quartz.impl.StdSchedulerFactory"/>
+<fullyQualifiedTypeName name="org.quartz.SchedulerException"/>
+</qualifiedTypeNameHistroy>

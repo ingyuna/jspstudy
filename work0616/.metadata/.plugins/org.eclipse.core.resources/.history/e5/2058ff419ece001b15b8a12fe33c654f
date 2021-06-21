@@ -1,0 +1,31 @@
+package batch;
+
+public class CronSchedullerListener {
+
+	// field
+		CronScheduler cronScheduler;
+		
+		// constructor
+	    public CronSchedulerListener() { }
+	    
+	    // method
+	    @Override
+	    public void contextDestroyed(ServletContextEvent sce)  { 
+	       System.out.println("=====서버가 종료되었습니다. =====");
+	       try {
+	    	   cronScheduler.scheduler.clear();
+	    	   cronScheduler.scheduler.shutdown();
+	       } catch (SchedulerException e) {
+	    	   e.printStackTrace();
+	       }
+	    }
+
+		@Override
+	    public void contextInitialized(ServletContextEvent sce)  { 
+	       System.out.println("=====서버가 시작되었습니다.=====");
+	       cronScheduler = new CronScheduler("0 35 17 ? * FRI *", Top3StudentJob.class);
+	       
+	       cronScheduler.execute();
+	    }
+		
+}

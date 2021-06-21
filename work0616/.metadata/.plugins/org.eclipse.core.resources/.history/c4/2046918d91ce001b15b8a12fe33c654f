@@ -1,0 +1,19 @@
+package command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mav.ModelAndView;
+
+public class InsertReplyCommand implements BoardCommand {
+
+	@Override
+	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		
+		
+		
+		
+	}
+
+}
