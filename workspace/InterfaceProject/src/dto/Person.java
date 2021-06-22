@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Person {
 
-	private String sno;
+	private String sno;			// sno = Society Number
 	private String name;
 	private int age;
 	private String birthday;
